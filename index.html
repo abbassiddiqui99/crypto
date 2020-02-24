@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta
+			name="viewport"
+			content="width=device-width, minimum-scale=1.0, initial-scale=1.0"
+		/>
+		<meta charset="utf-8" />
+		<meta
+			name="description"
+			content="This is a simple Caesars (shift) Cipher rot13."
+		/>
+		<meta name="author" content="Alex Disdier" />
+
+		<!-- favicon -->
+		<link rel="icon" type="image/png" href="images/default-favicon.png" />
+
+		<title>Cipher's</title>
+		<link rel="stylesheet" href="styles/normalize.css" />
+		<link rel="stylesheet" href="styles/bootstrap.css" />
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" -->
+		<!-- integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+
+		<link rel="stylesheet" href="styles/main.css" />
+	</head>
+
+	<body>
+		<ul class="nav justify-content-end" style="margin-top: 12px;">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">
+					<select class="custom-select" id="ctype">
+						<option selected value="0">Select CIPHER</option>
+						<option value="1">Shift CIPHER</option>
+						<option value="2">Vigenere CIPHER</option>
+						<option value="3">Playfair CIPHER</option>
+						<option value="4">Substitution CIPHER</option>
+					</select>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" href="#" style="padding-left: 0;"
+					><input class="form-control" type="text" placeholder="KEY" id="key"
+				/></a>
+			</li>
+		</ul>
+
+		<div class="container">
+			<h1 id="heading">Cipher's</h1>
+
+			<div id="app">
+				<form>
+					<input class="bttn" type="text" id="inputtext" />
+					<label
+						><a class="bttnn" onclick="encrypt()">ENCODE</a> or
+						<a class="bttnn" onclick="decrypt()">DECODE</a></label
+					>
+				</form>
+
+				<div class="resultdiv">
+					<p></p>
+					<h1 class="result" id="result"></h1>
+				</div>
+			</div>
+		</div>
+		<script src="scripts/shift.js"></script>
+		<script src="scripts/vencrypt.js"></script>
+		<script src="scripts/playfair.js"></script>
+		<script src="scripts/scrypt.js"></script>
+		<script src="scripts/main.js"></script>
+	</body>
+</html>
